@@ -1,16 +1,17 @@
-#   
-#
-#
+# Plotting av funksjon
+# Forfatter: Magnus Baltzersen 22.10.24 
+# Skrevet i VS code 
+
 
 import numpy as np
 import matplotlib.pyplot as plt
 
 # Definer x-verdier og funksjonen f(x)
 x = np.linspace(-10, 10, 200)                                      # Genererer 200 punkter fra -10 til 10 som vist i oppgaveteksen
-funk_x = -x**2 - 5                                                    # Funksjonen f(x)
+funk_x = -x**2 - 5                                                 # Funksjonen f(x)
 
 # Plot funksjonen
-plt.plot(x, funk_x, label=r'$f(x) = -x^2 - 5$', color='blue')         # plt.plot(x, f_x): Tegner grafen basert på x-verdiene og tilhørende 𝑓(𝑥)f(x)-verdierlabel: Gir grafen 
+plt.plot(x, funk_x, label=r'$f(x) = -x^2 - 5$', color='blue')      # plt.plot(x, f_x): Tegner grafen basert på x-verdiene og tilhørende 𝑓(𝑥)f(x)-verdierlabel: Gir grafen 
                                                                    # et navn som kan vises i en legende. Her bruker vi LaTeX-syntaks (r'$f(x) = -x^2 - 5$') for å få fin matematisk formatering.
 
 plt.title("Grafen til f(x) = -x^2 - 5")                            # Legger til en tittel på grafen. 
