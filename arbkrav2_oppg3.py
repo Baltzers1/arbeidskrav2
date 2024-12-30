@@ -2,22 +2,21 @@
 # Forfatter: Magnus Baltzersen 22.10.24 
 # Skrevet i VS code 
 
-import numpy as np                                                                                  # importerer numpy for å kunne bruke numpy.pi velger
-                                                                                                    # å gi den aliaset np
-def grad_til_rad(v_grad):                                                                           # definerer grader til radianer ved å gi formelen som tar inputen
-    v_rad = v_grad * np.pi / 180                                                                    # v_grad og returnerer resultatet v_rad        
-    return v_rad
+import math                                                                                  # importerer math for å bruke math.pi
 
-while True:                                                      
+def grad_til_rad(v_grad):                                                                    # funksjon for utregning ved å gi formelen som tar inputen
+    v_rad = v_grad * math.pi / 180                                                           # v_grad og returnerer resultatet v_rad        
+    return v_rad                                                                             
+
+while True:                                                                                  # while loop så ikke programmet lukker seg om vi får en error
     try:
-        v_grad = float(input('Skriv inn gradtallet:' ))                                             # her spørre det etterv_grad som vi gir som input 
-                                                                                                    # den kommer igjen i neste linje
+        v_grad = float(input('Skriv inn gradtallet:' ))                                      # spør etter v_grad som vi gir som input  den kommer igjen i neste linje
+                                                                                                  
         v_rad = grad_til_rad(v_grad)
-        print("Vinkelen", v_grad, "grader tilsvarer" , round(v_rad,4) , "radianer.")                # her blir inputen satt som en verbal i utregningen som ble     
-        break                                                                                       # definert i starten av koden, før while loopen.             
+        print("Vinkelen", v_grad, "grader tilsvarer" , round(v_rad,4) , "radianer.")         # printer tekst + v_grad som allerede er definert som en float og v_rad    
+        break                                                                                # med fire desimaler avrundet    
 
-    except ValueError: 
+    except ValueError:                                                                       # om try funksjonen feiler så printes dette og while loopen fortsetter
         print("Ugyldig input! Vennligst skriv inn et gyldig tall.")      
         print("")
-
         
